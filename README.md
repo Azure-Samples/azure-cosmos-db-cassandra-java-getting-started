@@ -8,8 +8,8 @@ author: kansrini
 Azure Cosmos DB is a globally distributed multi-model database. One of the supported APIs is the Cassandra API. This sample walks you through creation of keyspace, table, inserting and querying the data.
 
 
-## Running this sample
-* Before you can run this sample, you must have the following perquisites:
+## Prerequisites
+Before you can run this sample, you must have the following prerequisites:
 	* [Java Development Kit (JDK) 1.7+](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
         * On Ubuntu, run `apt-get install default-jdk` to install the JDK.
     * Be sure to set the JAVA_HOME environment variable to point to the folder where the JDK is installed.
@@ -18,7 +18,7 @@ Azure Cosmos DB is a globally distributed multi-model database. One of the suppo
     * [Git](https://www.git-scm.com/)
         * On Ubuntu, you can run `sudo apt-get install git` to install Git.
 
-
+## Running this sample
 1. Clone this repository using `git clone git@github.com:Azure-Samples/azure-cosmos-db-cassandra-java-getting-started.git cosmosdb`.
 
 2. Change directories to the repo using `cd cosmosdb/java-examples`
