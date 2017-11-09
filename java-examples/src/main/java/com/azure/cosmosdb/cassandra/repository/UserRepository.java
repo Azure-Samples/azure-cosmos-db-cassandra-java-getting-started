@@ -27,7 +27,7 @@ public class UserRepository {
     public void createKeyspace() {
         final String query = "CREATE KEYSPACE IF NOT EXISTS uprofile WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '3' } ";
         session.execute(query);
-		LOGGER.info("Created keyspace 'uprofile'");
+        LOGGER.info("Created keyspace 'uprofile'");
     }
 
     /**
@@ -36,7 +36,7 @@ public class UserRepository {
     public void createTable() {
         final String query = "CREATE TABLE IF NOT EXISTS uprofile.user (user_id int PRIMARY KEY, user_name text, user_bcity text)";
         session.execute(query);
-		LOGGER.info("Created table 'user'");
+        LOGGER.info("Created table 'user'");
     }
 
     /**
@@ -75,7 +75,7 @@ public class UserRepository {
     /**
      * Insert a row into user table
      *
-     * @param id user_id
+     * @param id   user_id
      * @param name user_name
      * @param city user_bcity
      */
@@ -86,6 +86,7 @@ public class UserRepository {
 
     /**
      * Create a PrepareStatement to insert a row to user table
+     *
      * @return PreparedStatement
      */
     public PreparedStatement prepareInsertStatement() {

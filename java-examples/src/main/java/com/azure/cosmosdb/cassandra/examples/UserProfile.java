@@ -33,7 +33,6 @@ public class UserProfile {
             
             //Create table in cassandra database
             repository.createTable();
-            LOGGER.info("Created table 'user'");
 
             //Insert rows into user table
             PreparedStatement preparedStatement = repository.prepareInsertStatement();
