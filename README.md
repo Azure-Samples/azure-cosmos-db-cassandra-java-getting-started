@@ -38,6 +38,80 @@ Azure Cosmos DB is a globally distributed multi-model database. One of the suppo
 ## About the code
 The code included in this sample is intended to get you quickly started with a Java console application that connects to Azure Cosmos DB with the Cassandra API.
 
+## Review the code
+
+If you're interested in learning how the database resources are created in the code, you can review the following snippets. The snippets are all taken from `src/main/java/com/azure/cosmosdb/cassandra/util/CassandraUtils.java` and `src/main/java/com/azure/cosmosdb/cassandra/repository/UserRepository.java` files.
+
+* Cassandra Host, Port, User name and password is set using the connection string page in the Azure portal.
+
+   ```java
+   this.cluster = Cluster.builder().addContactPoint(host).withPort(port).withCredentials(username, password).build();
+   ```
+
+* The `cluster` connects to the Azure Cosmos DB Cassandra API and returns a session to access.
+
+    ```java
+    return cluster.connect();
+    ```
+
+* A new keyspace is created.
+
+    ```java
+    public void createKeyspace() {
+        final String query = "CREATE KEYSPACE IF NOT EXISTS uprofile WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '3' } ";
+        session.execute(query);
+        LOGGER.info("Created keyspace 'uprofile'");
+    }
+    ```
+
+* A new table is created.
+
+   ```java
+   public void createTable() {
+        final String query = "CREATE TABLE IF NOT EXISTS uprofile.user (user_id int PRIMARY KEY, user_name text, user_bcity text)";
+        session.execute(query);
+        LOGGER.info("Created table 'user'");
+   }
+   ```
+
+* User entities are inserted using a prepared statement object.
+
+    ```java
+    public PreparedStatement prepareInsertStatement() {
+        final String insertStatement = "INSERT INTO  uprofile.user (user_id, user_name , user_bcity) VALUES (?,?,?)";
+        return session.prepare(insertStatement);
+    }
+
+	public void insertUser(PreparedStatement statement, int id, String name, String city) {
+        BoundStatement boundStatement = new BoundStatement(statement);
+        session.execute(boundStatement.bind(id, name, city));
+    }
+    ```
+
+* Query to get get all User information.
+
+    ```java
+   public void selectAllUsers() {
+        final String query = "SELECT * FROM uprofile.user";
+        List<Row> rows = session.execute(query).all();
+
+        for (Row row : rows) {
+            LOGGER.info("Obtained row: {} | {} | {} ", row.getInt("user_id"), row.getString("user_name"), row.getString("user_bcity"));
+        }
+    }
+    ```
+
+ * Query to get a single User information.
+
+    ```java
+    public void selectUser(int id) {
+        final String query = "SELECT * FROM uprofile.user where user_id = 3";
+        Row row = session.execute(query).one();
+
+        LOGGER.info("Obtained row: {} | {} | {} ", row.getInt("user_id"), row.getString("user_name"), row.getString("user_bcity"));
+    }
+    ```
+
 ## More information
 
 - [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction)
