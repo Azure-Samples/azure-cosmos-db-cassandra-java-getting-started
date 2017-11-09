@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * This class gives examples of create, delete table on Cassandra database
+ * This class gives implementations of create, delete table on Cassandra database
  * Insert & select data from the table
  */
 public class UserRepository {

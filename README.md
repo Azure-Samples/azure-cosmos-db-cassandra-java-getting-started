@@ -11,12 +11,12 @@ Azure Cosmos DB is a globally distributed multi-model database. One of the suppo
 ## Running this sample
 * Before you can run this sample, you must have the following perquisites:
 	* [Java Development Kit (JDK) 1.7+](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-    * On Ubuntu, run `apt-get install default-jdk` to install the JDK.
+        * On Ubuntu, run `apt-get install default-jdk` to install the JDK.
     * Be sure to set the JAVA_HOME environment variable to point to the folder where the JDK is installed.
     * [Download](http://maven.apache.org/download.cgi) and [install](http://maven.apache.org/install.html) a [Maven](http://maven.apache.org/) binary archive
-    * On Ubuntu, you can run `apt-get install maven` to install Maven.
+        * On Ubuntu, you can run `apt-get install maven` to install Maven.
     * [Git](https://www.git-scm.com/)
-    * On Ubuntu, you can run `sudo apt-get install git` to install Git.
+        * On Ubuntu, you can run `sudo apt-get install git` to install Git.
 
 
 1. Clone this repository using `git clone git@github.com:Azure-Samples/azure-cosmos-db-cassandra-java-getting-started.git cosmosdb`.
@@ -28,11 +28,10 @@ Azure Cosmos DB is a globally distributed multi-model database. One of the suppo
 	```
 	cassandra_host=<FILLME>
 	cassandra_username=<FILLME>
-	cassandra_password=<FILLME>
-	
+	cassandra_password=<FILLME>	
 	```
 
-5. Run `mvn clean install` from java-examples folder to build the project
+5. Run `mvn clean install` from java-examples folder to build the project. This will generate cosmosdb-cassandra-examples.jar under target folder.
  
 6. Run `java -cp target/cosmosdb-cassandra-examples.jar com.azure.cosmosdb.cassandra.examples.UserProfile` in a terminal to start your java application.
 

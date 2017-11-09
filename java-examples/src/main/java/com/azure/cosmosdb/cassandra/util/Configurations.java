@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+/**
+ * Configuration utility to read the configurations from properties file
+ */
 public class Configurations {
     private static final Logger LOGGER = LoggerFactory.getLogger(Configurations.class);
     private static String PROPERTY_FILE = "config.properties";

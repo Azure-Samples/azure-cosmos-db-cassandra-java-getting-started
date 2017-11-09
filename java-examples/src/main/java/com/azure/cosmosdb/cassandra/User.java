@@ -1,5 +1,8 @@
 package com.azure.cosmosdb.cassandra;
 
+/**
+ * User table entity class
+ */
 public class User {
 
     private int user_id;

@@ -9,7 +9,14 @@ import com.datastax.driver.core.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
+/**
+ * Example class which will demonstrate following operations on Cassandra Database on CosmosDB
+ * - Create Keyspace
+ * - Create Table
+ * - Insert Rows
+ * - Select all data from a table
+ * - Select a row from a table
+ */
 public class UserProfile {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserProfile.class);
 
