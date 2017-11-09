@@ -1,57 +1,46 @@
-# Project Name
+---
+services: cosmos-db
+platforms: java
+author: kansrini
+---
 
-(short, 1-3 sentenced, description of the project)
-
-## Features
-
-This project framework provides the following features:
-
-* Feature 1
-* Feature 2
-* ...
-
-## Getting Started
-
-### Prerequisites
-
-(ideally very short, if any)
-
-- OS
-- Library version
-- ...
-
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
-
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
+# Developing a Java app with Cassandra API using Azure Cosmos DB
+Azure Cosmos DB is a globally distributed multi-model database. One of the supported APIs is the Cassandra API. This sample walks you through creation of keyspace, table, inserting and querying the data.
 
 
-## Demo
+## Running this sample
+* Before you can run this sample, you must have the following perquisites:
+	* [Java Development Kit (JDK) 1.7+](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+    * On Ubuntu, run `apt-get install default-jdk` to install the JDK.
+    * Be sure to set the JAVA_HOME environment variable to point to the folder where the JDK is installed.
+    * [Download](http://maven.apache.org/download.cgi) and [install](http://maven.apache.org/install.html) a [Maven](http://maven.apache.org/) binary archive
+    * On Ubuntu, you can run `apt-get install maven` to install Maven.
+    * [Git](https://www.git-scm.com/)
+    * On Ubuntu, you can run `sudo apt-get install git` to install Git.
 
-A demo app is included to show how to use the project.
 
-To run the demo, follow these steps:
+1. Clone this repository using `git clone git@github.com:Azure-Samples/azure-cosmos-db-cassandra-java-getting-started.git cosmosdb`.
 
-(Add steps to start up the demo)
+2. Change directories to the repo using `cd cosmosdb/java-examples`
 
-1.
-2.
-3.
+3. Next, substitute the Cassandra host, username, password  `java-examples\src\main\resources\config.properties` with your Cosmos DB account's values from connectionstring panel of the portal.
 
-## Resources
+	```
+	cassandra_host=<FILLME>
+	cassandra_username=<FILLME>
+	cassandra_password=<FILLME>
+	
+	```
 
-(Any additional resources or related projects)
+5. Run `mvn clean install` from java-examples folder to build the project
+ 
+6. Run `java -cp target/cosmosdb-cassandra-examples.jar com.azure.cosmosdb.cassandra.examples.UserProfile` in a terminal to start your java application.
 
-- Link to supporting information
-- Link to similar sample
-- ...
+## About the code
+The code included in this sample is intended to get you quickly started with a Java console application that connects to Azure Cosmos DB with the Cassandra API.
+
+## More information
+
+- [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction)
+- [Java driver Source](https://github.com/datastax/java-driver)
+- [Java driver Documentation](https://docs.datastax.com/en/developer/java-driver/)
