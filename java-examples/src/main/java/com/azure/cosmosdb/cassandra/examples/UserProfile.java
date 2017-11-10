@@ -36,11 +36,11 @@ public class UserProfile {
 
             //Insert rows into user table
             PreparedStatement preparedStatement = repository.prepareInsertStatement();
-            repository.insertUser(preparedStatement, 1, "Kanna", "Bangalore");
-            repository.insertUser(preparedStatement, 2, "Siddesh", "Mumbai");
-            repository.insertUser(preparedStatement, 3, "Govind", "Belgum");
-            repository.insertUser(preparedStatement, 4, "Mohit", "Gurgaon");
-            repository.insertUser(preparedStatement, 5, "Vinod", "Dubai");
+            repository.insertUser(preparedStatement, 1, "LyubovK", "Bangalore");
+            repository.insertUser(preparedStatement, 2, "JiriK", "Mumbai");
+            repository.insertUser(preparedStatement, 3, "IvanH", "Belgum");
+            repository.insertUser(preparedStatement, 4, "YuliaT", "Gurgaon");
+            repository.insertUser(preparedStatement, 5, "IvanaV", "Dubai");
 
             LOGGER.info("Select all users");
             repository.selectAllUsers();
