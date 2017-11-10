@@ -34,6 +34,7 @@ Azure Cosmos DB is a globally distributed multi-model database. One of the suppo
 5. Run `mvn clean install` from java-examples folder to build the project. This will generate cosmosdb-cassandra-examples.jar under target folder.
  
 6. Run `java -cp target/cosmosdb-cassandra-examples.jar com.azure.cosmosdb.cassandra.examples.UserProfile` in a terminal to start your java application.
+   ![Console output](./media/output.png)
 
 ## About the code
 The code included in this sample is intended to get you quickly started with a Java console application that connects to Azure Cosmos DB with the Cassandra API.
