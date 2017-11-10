@@ -20,7 +20,7 @@ import org.slf4j.LoggerFactory;
 public class UserProfile {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserProfile.class);
 
-    public static void main(String[] s) throws InterruptedException, IOException {
+    public static void main(String[] s) throws Exception {
 
         CassandraUtils utils = new CassandraUtils();
         Session cassandraSession = utils.getSession();
