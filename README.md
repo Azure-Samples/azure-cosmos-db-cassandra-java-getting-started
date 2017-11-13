@@ -25,11 +25,15 @@ Azure Cosmos DB is a globally distributed multi-model database. One of the suppo
 
 3. Next, substitute the Cassandra host, username, password  `java-examples\src\main\resources\config.properties` with your Cosmos DB account's values from connectionstring panel of the portal.
 
-	```
-	cassandra_host=<FILLME>
-	cassandra_username=<FILLME>
-	cassandra_password=<FILLME>	
-	```
+    ```
+    cassandra_host=<FILLME>
+    cassandra_username=<FILLME>
+    cassandra_password=<FILLME>
+    ssl_keystore_file_path=<FILLME>
+    ssl_keystore_password=<FILLME>
+    ```
+    If ssl_keystore_file_path is not given in config.properties, then by default <JAVA_HOME>/jre/lib/security/cacerts will be used
+    If ssl_keystore_password is not given in config.properties, then the default password 'changeit' will be used
 
 5. Run `mvn clean install` from java-examples folder to build the project. This will generate cosmosdb-cassandra-examples.jar under target folder.
  
