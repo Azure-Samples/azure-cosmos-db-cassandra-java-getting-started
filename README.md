@@ -7,10 +7,10 @@ author: kansrini
 # Developing a Java app with Cassandra API using Azure Cosmos DB
 Azure Cosmos DB is a globally distributed multi-model database. One of the supported APIs is the Cassandra API. This sample walks you through creation of keyspace, table, inserting and querying the data.
 
-
 ## Prerequisites
 * Before you can run this sample, you must have the following prerequisites:
-	* [Java Development Kit (JDK) 1.8+](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+    * An active Azure Cassandra API account - If you don't have an account, refer to the [Create Cassandra API account](https://github.com/mimig1/azure-docs-pr/blob/cassandra/includes/cosmos-db-create-dbaccount-cassandra.md).
+    * [Java Development Kit (JDK) 1.8+](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
         * On Ubuntu, run `apt-get install default-jdk` to install the JDK.
     * Be sure to set the JAVA_HOME environment variable to point to the folder where the JDK is installed.
     * [Download](http://maven.apache.org/download.cgi) and [install](http://maven.apache.org/install.html) a [Maven](http://maven.apache.org/) binary archive
