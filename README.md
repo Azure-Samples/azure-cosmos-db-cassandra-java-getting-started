@@ -63,7 +63,7 @@ If you're interested in learning how the database resources are created in the c
 
     ```java
     public void createKeyspace() {
-        final String query = "CREATE KEYSPACE IF NOT EXISTS uprofile WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '3' } ";
+        final String query = "CREATE KEYSPACE IF NOT EXISTS uprofile WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'datacenter1' : 1 }";
         session.execute(query);
         LOGGER.info("Created keyspace 'uprofile'");
     }
