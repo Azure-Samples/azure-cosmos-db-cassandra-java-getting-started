@@ -1,7 +1,11 @@
 ---
-services: cosmos-db
-platforms: java
-author: kansrini
+page_type: sample
+languages:
+- java
+products:
+- azure
+description: "Azure Cosmos DB is a globally distributed multi-model database. One of the supported APIs is the Cassandra API"
+urlFragment: azure-cosmos-db-cassandra-java-getting-started
 ---
 
 # Developing a Java app with Cassandra API using Azure Cosmos DB
