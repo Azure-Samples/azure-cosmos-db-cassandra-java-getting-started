@@ -39,7 +39,7 @@ Azure Cosmos DB is a globally distributed multi-model database. One of the suppo
     If ssl_keystore_file_path is not given in config.properties, then by default <JAVA_HOME>/jre/lib/security/cacerts will be used
     If ssl_keystore_password is not given in config.properties, then the default password 'changeit' will be used
 
-5. Run `mvn clean install` from src folder to build the project. This will generate cosmosdb-cassandra-examples.jar under target folder.
+5. Run `mvn clean install` from cosmosdb folder to build the project. This will generate cosmosdb-cassandra-examples.jar under target folder.
  
 6. Run `java -cp target/cosmosdb-cassandra-examples.jar com.azure.cosmosdb.cassandra.examples.UserProfile` in a terminal to start your java application.
    ![Console output](./media/output.png)
